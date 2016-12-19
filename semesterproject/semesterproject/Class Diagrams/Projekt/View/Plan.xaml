@@ -9,7 +9,13 @@
     x:Class="Projekt.View.Plan"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF96FD00" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.DataContext>
             <ViewModel:PlanViewModel/>
         </Grid.DataContext>
@@ -47,63 +53,63 @@
             <Run/>
         </TextBlock>
         <TextBox x:Name="AddMenuTextBox" HorizontalAlignment="Right" Margin="0,475,40,0" TextWrapping="Wrap" Width="760" FontSize="25" Text="{Binding Meal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="45" VerticalAlignment="Top" TextAlignment="Left"/>
-        <Button x:Name="MondayButton" Content="Tilføj til&#xA;Mandag" HorizontalAlignment="Right" Margin="0,0,640,361" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+        <Button x:Name="MondayButton" Content="Tilføj til&#xA;Mandag" HorizontalAlignment="Right" Margin="0,0,640,361" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120" Background="#FF2EFF00" BorderBrush="Black">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
                     <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddMonday"/>
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </Button>
-        <Button x:Name="TuesdayButton" Content="Tilføj til&#xA;Tirsdag" HorizontalAlignment="Right" Margin="0,0,440,361" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+        <Button x:Name="TuesdayButton" Content="Tilføj til&#xA;Tirsdag" HorizontalAlignment="Right" Margin="0,0,440,361" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120" Background="#FF2EFF00" BorderBrush="Black">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
                     <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddTuesday"/>
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </Button>
-        <Button x:Name="WednesdayButton" Content="Tilføj til&#xA;Onsdag" HorizontalAlignment="Right" Margin="0,0,240,361" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+        <Button x:Name="WednesdayButton" Content="Tilføj til&#xA;Onsdag" HorizontalAlignment="Right" Margin="0,0,240,361" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120" Background="#FF2EFF00" BorderBrush="Black">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
                     <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddWednesday"/>
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </Button>
-        <Button x:Name="ThursdayButton" Content="Tilføj til&#xA;Torsdag" HorizontalAlignment="Right" Margin="0,0,40,361" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+        <Button x:Name="ThursdayButton" Content="Tilføj til&#xA;Torsdag" HorizontalAlignment="Right" Margin="0,0,40,361" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120" Background="#FF2EFF00" BorderBrush="Black">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
                     <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddThursday"/>
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </Button>
-        <Button x:Name="MondayMenuButton" Content="Tilføj Menu&#xD;&#xA;til Mandag" HorizontalAlignment="Right" Margin="0,0,640,200" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+        <Button x:Name="MondayMenuButton" Content="Tilføj Menu&#xD;&#xA;til Mandag" HorizontalAlignment="Right" Margin="0,0,640,200" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120" Background="Red" BorderBrush="Black">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
                     <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddMenuMonday"/>
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </Button>
-        <Button x:Name="TuesdayMenuButton" Content="Tilføj Menu &#xD;&#xA;til Tirsdag" HorizontalAlignment="Right" Margin="0,0,440,200" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+        <Button x:Name="TuesdayMenuButton" Content="Tilføj Menu &#xD;&#xA;til Tirsdag" HorizontalAlignment="Right" Margin="0,0,440,200" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120" Background="Red" BorderBrush="Black">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
                     <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddMenuTuesday"/>
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </Button>
-        <Button x:Name="WednesdayMenuButton" Content="Tilføj Menu&#xD;&#xA;til Onsdag" HorizontalAlignment="Right" Margin="0,0,240,200" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+        <Button x:Name="WednesdayMenuButton" Content="Tilføj Menu&#xD;&#xA;til Onsdag" HorizontalAlignment="Right" Margin="0,0,240,200" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120" Background="Red" BorderBrush="Black">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
                     <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddMenuWednesday"/>
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </Button>
-        <Button x:Name="ThursdayMenuButton" Content="Tilføj Menu&#xD;&#xA;til Torsdag" HorizontalAlignment="Right" Margin="0,0,40,200" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+        <Button x:Name="ThursdayMenuButton" Content="Tilføj Menu&#xD;&#xA;til Torsdag" HorizontalAlignment="Right" Margin="0,0,40,200" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120" Background="Red" BorderBrush="Black">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
                     <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddMenuThursday"/>
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </Button>
-        <Button x:Name="BackButton" Content="Tilbage&#xD;&#xA;" HorizontalAlignment="Right" Height="80" Margin="0,0,80,40" VerticalAlignment="Bottom" Width="160" FontSize="28" Click="ButtonClickBack"/>
+        <Button x:Name="BackButton" Content="Tilbage&#xD;&#xA;" HorizontalAlignment="Right" Height="80" Margin="0,0,40,40" VerticalAlignment="Bottom" Width="160" FontSize="28" Click="ButtonClickBack" BorderBrush="Black" Background="#FFC2C2DA" BorderThickness="5"/>
         <Border x:Name="ButtonSeperatorBorder" BorderBrush="Black" BorderThickness="0,2,0,0" HorizontalAlignment="Right" Height="15" Margin="0,0,40,325" VerticalAlignment="Bottom" Width="760"/>
         <CheckBox x:Name="MondayCheckBox" Content="Særarrangement" Height="0" Margin="140,189,0,0" VerticalAlignment="Top" Width="155" IsChecked="{Binding MondayCheckBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         <CheckBox x:Name="TuesdayCheckBox" Content="Særarrangement" Height="0" Margin="384,189,0,0" VerticalAlignment="Top" Width="155" IsChecked="{Binding TuesdayCheckBox, Mode=TwoWay}"/>
