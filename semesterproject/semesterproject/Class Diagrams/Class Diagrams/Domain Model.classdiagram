@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="afcaad31-fa13-42e3-979b-65f620821c6b" name="Domain Model" linkedPackageId="4db2c116-9822-4b28-8667-27b27a411949" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="e3bccc12-6366-4347-a9b4-8fccc5073144">
+      <profileInstance Id="cf98a9e5-cb09-4d5f-9712-b7e576c19bc9" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="86596245-c982-4c4d-a04c-1b2e685a0434">
+      <profileInstance Id="12cba5b9-e4b9-4696-9b86-78624c335059" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="85c28541-cc0c-42a1-be6e-a8a7df3ef6e6" name="Residents" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="320fd328-5259-4238-a072-a0446d55e4e0" />
+        <targetEnds>
+          <association Id="d2648251-72bd-4972-9aa3-85c622b22f7b" isDerived="false" sourceEndRoleName="Residents" targetEndRoleName="Residence" isLeaf="false" isAbstract="false">
+            <classMoniker Id="0015f0bb-12fb-4e65-87de-988d4aea8e6a" LastKnownName="Residence" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aec2df51-79b2-4235-bea6-1524d55cc6b4" name="Residents" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5ffb4d26-ea2e-48a6-b2e3-2ed36ef975a0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="50d2f917-db97-4a56-8e05-b6c83cbb9edc" name="Residence" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="381618bd-7a14-4909-8950-c0f2f744d64d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="48cca8bb-6f3b-4e86-a822-a894b50d62e7" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0015f0bb-12fb-4e65-87de-988d4aea8e6a" name="Residence" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="32024567-5454-4c52-8429-aed9fc2c00bd" />
+        <targetEnds>
+          <association Id="38cf1057-e342-4611-8d12-d3d86db6845f" isDerived="false" sourceEndRoleName="Residence" targetEndRoleName="SignUp" isLeaf="false" isAbstract="false">
+            <classMoniker Id="195021c6-83cd-4d00-be9e-e5da430b5e6a" LastKnownName="SignUp" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5955b879-8117-4364-962f-2542f05ac7a6" name="Residence" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e954459a-3117-4b92-8f48-75c4c6716a68" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e224a5c1-cdd4-4e91-8fb9-35993427b7d4" name="SignUp" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5d56e357-8cbd-49ee-8ff6-8ba33620397a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="48e96939-f227-4de8-9ec8-ae2fbae626a7" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b782e916-4b7b-47a3-8aaf-822f9463265d" name="Guests" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="52b067e8-98b8-43bb-aad8-08f9881e66d3" />
+        <targetEnds>
+          <association Id="f09d2672-94f9-4fac-8ec8-69d2f5ea3ee6" isDerived="false" sourceEndRoleName="Guests" targetEndRoleName="Residence" isLeaf="false" isAbstract="false">
+            <classMoniker Id="0015f0bb-12fb-4e65-87de-988d4aea8e6a" LastKnownName="Residence" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="06a74a6f-d3c2-4984-8644-5857b1643470" name="Guests" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f78904d0-1b6b-497a-b866-2232ffff1dfb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0ec23718-c4ed-419c-9643-2fdd5f046dc4" name="Residence" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7d8be71d-4e0c-4390-869d-7a7e73180acc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a9460ed2-ae45-4013-b0b0-73bd188ced8d" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="195021c6-83cd-4d00-be9e-e5da430b5e6a" name="SignUp" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="da91cede-62bf-4c89-b75a-a747fa0f44bb" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a2ca9db0-3429-4297-9d80-69a5dcd171d4" name="Meal" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e9b75b15-1da0-4bc0-a79b-a9ff814165b0" />
+        <targetEnds>
+          <association Id="d9ad21c8-6b67-4caa-a253-389a7f699bb5" isDerived="false" sourceEndRoleName="Meal" targetEndRoleName="SignUp" isLeaf="false" isAbstract="false">
+            <classMoniker Id="195021c6-83cd-4d00-be9e-e5da430b5e6a" LastKnownName="SignUp" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2e5dbfa9-5b5c-46f0-aaa8-5b6715069ef9" name="Meal" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f70680a6-6050-4417-8228-c191516487ae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cf5ddf8c-9fff-4bba-832b-275dc2fd76fb" name="SignUp" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3a7f4e1f-b4ed-4be8-bd7c-7ac4317c641a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c83b1e71-ecf7-4d25-8d29-b393df83065f" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e88bc9e9-f520-44d3-baef-6ac46496233c" name="Roles" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ba053ab8-58ca-49df-9d6e-baf6927bae7b" />
+        <targetEnds>
+          <association Id="c030fc74-0108-44c0-be13-b17938215108" isDerived="false" sourceEndRoleName="Role" targetEndRoleName="Meal" isLeaf="false" isAbstract="false">
+            <classMoniker Id="a2ca9db0-3429-4297-9d80-69a5dcd171d4" LastKnownName="Meal" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9f9e715f-b8eb-4631-9295-cdf66bfc068c" name="Role" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="302b2e81-6879-4c0c-8ea5-d4b7905157bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="071341f8-ea81-4705-8321-e0fd0f5c956c" name="Meal" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0d8f2673-6576-46e1-892e-8cacda1c8540" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8a2aece9-0933-4b1e-bebb-6d4ac5f03e72" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="df98e292-f2af-4118-b637-a912b138c980" name="Calender" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e95ce5f7-df72-4cb3-a05d-a4b4cc33f75b" />
+        <targetEnds>
+          <association Id="1860caec-7c7f-4fbc-9881-145f7134a488" isDerived="false" sourceEndRoleName="Calender" targetEndRoleName="Meal" isLeaf="false" isAbstract="false">
+            <classMoniker Id="a2ca9db0-3429-4297-9d80-69a5dcd171d4" LastKnownName="Meal" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="058caa5f-e77a-4928-bd40-0749f7347f79" name="Calender" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3dcc1201-efc9-4b75-bead-b3daba4d233c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d6b0451b-d4c1-4b03-ba10-4fd397c7486b" name="Meal" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3a8075f3-323a-4670-b58c-03fcdd18589c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4e3d4f86-591b-4687-a7b6-087f9ca88ec2" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="4db2c116-9822-4b28-8667-27b27a411949" name="Class Diagrams">
+    <elementDefinition Id="19eb311f-067a-40a4-9177-9d8354213acb" />
+  </package>
+</logicalClassDesignerModel>

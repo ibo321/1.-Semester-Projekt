@@ -1,0 +1,113 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Projekt.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="using:Projekt.ViewModel"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+    x:Class="Projekt.View.Plan"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.DataContext>
+            <ViewModel:PlanViewModel/>
+        </Grid.DataContext>
+        <TextBlock x:Name="MondayTextBlock" HorizontalAlignment="Left" Height="100" Margin="83,140,0,0" TextWrapping="Wrap" Text="Mandag" VerticalAlignment="Top" Width="240" FontSize="35" TextAlignment="Center"/>
+        <Border x:Name="MondayBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="83,140,0,0" VerticalAlignment="Top" Width="240"/>
+        <TextBlock x:Name="TuesdayTextBlock" HorizontalAlignment="Left" Height="100" Margin="323,140,0,0" TextWrapping="Wrap" Text="Tirsdag" VerticalAlignment="Top" Width="240" FontSize="35" TextAlignment="Center"/>
+        <Border x:Name="TuesdayBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="323,140,0,0" VerticalAlignment="Top" Width="240"/>
+        <TextBlock x:Name="WednesdayTextBlock" HorizontalAlignment="Left" Height="100" Margin="563,140,0,0" TextWrapping="Wrap" Text="Onsdag" VerticalAlignment="Top" Width="240" FontSize="35" TextAlignment="Center"/>
+        <Border x:Name="WedensdayBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="563,140,0,0" VerticalAlignment="Top" Width="240"/>
+        <TextBlock x:Name="ThursdayTextBlock" Height="100" Margin="803,140,877,0" TextWrapping="Wrap" Text="Torsdag" VerticalAlignment="Top" FontSize="35" TextAlignment="Center" d:LayoutOverrides="LeftPosition, RightPosition"/>
+        <Border x:Name="ThursdayBorder" BorderBrush="Black" BorderThickness="1" Height="100" Margin="803,140,877,0" VerticalAlignment="Top" d:LayoutOverrides="LeftPosition, RightPosition"/>
+        <ListView x:Name="MondayListView" HorizontalAlignment="Left" Margin="83,320,0,200" Width="240" ItemsSource="{Binding StaffSingleton.StaffsMonday}"/>
+        <Border x:Name="MondayListBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="83,240,0,200" Width="240"/>
+        <ListView x:Name="TuesdayListView" HorizontalAlignment="Left" Margin="323,320,0,200" Width="240" ItemsSource="{Binding StaffSingleton.StaffsTuesday}"/>
+        <Border x:Name="TuesdayListBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="323,240,0,200" Width="240"/>
+        <ListView x:Name="WednesdayListView" HorizontalAlignment="Left" Margin="563,320,0,200" Width="240" ItemsSource="{Binding StaffSingleton.StaffsWednesday}"/>
+        <Border x:Name="WednesdayListBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="563,240,0,200" Width="240"/>
+        <ListView x:Name="ThursdayListView" Margin="803,320,877,200" d:LayoutOverrides="LeftPosition, RightPosition" ItemsSource="{Binding StaffSingleton.StaffsThursday}"/>
+        <Border x:Name="ThursdayListBorder" BorderBrush="Black" BorderThickness="1" Margin="803,240,877,200" d:LayoutOverrides="LeftPosition, RightPosition"/>
+        <ListView x:Name="MondayMenuListView" Height="80" Margin="83,240,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="240" ItemsSource="{Binding MenuSingleton.MenusMonday}" FontSize="100"/>
+        <ListView x:Name="TuesdayMenuListView" Height="80" Margin="323,240,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="240" ItemsSource="{Binding MenuSingleton.MenusTuesday}" FontSize="50"/>
+        <ListView x:Name="WednesdayMenuListView" Height="80" Margin="563,240,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="240" ItemsSource="{Binding MenuSingleton.MenusWednesday}" FontSize="50"/>
+        <ListView x:Name="ThursdayMenuListView" Height="80" Margin="803,240,877,0" VerticalAlignment="Top" ItemsSource="{Binding MenuSingleton.MenusThursday}" FontSize="50"/>
+        <TextBlock x:Name="JobTextBlock" HorizontalAlignment="Right" Height="40" Margin="0,154,40,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="760" FontSize="25" TextAlignment="Center">
+            <Run Text="Rolle"/>
+            <LineBreak/>
+            <Run/>
+        </TextBlock>
+        <TextBox x:Name="AddJobTextBox" HorizontalAlignment="Right" Height="43" Margin="0,214,40,0" TextWrapping="Wrap" Text="{Binding Job, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="760" FontSize="25"/>
+        <TextBlock x:Name="PersonTextBlock" HorizontalAlignment="Right" Height="40" Margin="0,274,40,0" TextWrapping="Wrap" Text="Person" VerticalAlignment="Top" Width="760" FontSize="25" TextAlignment="Center"/>
+        <TextBox x:Name="AddPersonTextBox" HorizontalAlignment="Right" Height="45" Margin="0,334,40,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="760" FontSize="25" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock x:Name="MenuTextBlock" HorizontalAlignment="Right" Height="40" Margin="0,415,40,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="760" FontSize="25" TextAlignment="Center">
+            <Run Text="Menu"/>
+            <LineBreak/>
+            <Run/>
+        </TextBlock>
+        <TextBox x:Name="AddMenuTextBox" HorizontalAlignment="Right" Margin="0,475,40,0" TextWrapping="Wrap" Width="760" FontSize="25" Text="{Binding Meal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="45" VerticalAlignment="Top" TextAlignment="Left"/>
+        <Button x:Name="MondayButton" Content="Tilføj til&#xA;Mandag" HorizontalAlignment="Right" Margin="0,0,640,361" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddMonday"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="TuesdayButton" Content="Tilføj til&#xA;Tirsdag" HorizontalAlignment="Right" Margin="0,0,440,361" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddTuesday"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="WednesdayButton" Content="Tilføj til&#xA;Onsdag" HorizontalAlignment="Right" Margin="0,0,240,361" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddWednesday"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="ThursdayButton" Content="Tilføj til&#xA;Torsdag" HorizontalAlignment="Right" Margin="0,0,40,361" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddThursday"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="MondayMenuButton" Content="Tilføj Menu&#xD;&#xA;til Mandag" HorizontalAlignment="Right" Margin="0,0,640,200" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddMenuMonday"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="TuesdayMenuButton" Content="Tilføj Menu &#xD;&#xA;til Tirsdag" HorizontalAlignment="Right" Margin="0,0,440,200" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddMenuTuesday"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="WednesdayMenuButton" Content="Tilføj Menu&#xD;&#xA;til Onsdag" HorizontalAlignment="Right" Margin="0,0,240,200" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddMenuWednesday"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="ThursdayMenuButton" Content="Tilføj Menu&#xD;&#xA;til Torsdag" HorizontalAlignment="Right" Margin="0,0,40,200" VerticalAlignment="Bottom" Width="160" FontSize="28" Height="120">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:CallMethodAction TargetObject="{Binding Mode=OneWay}" MethodName="AddMenuThursday"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="BackButton" Content="Tilbage&#xD;&#xA;" HorizontalAlignment="Right" Height="80" Margin="0,0,80,40" VerticalAlignment="Bottom" Width="160" FontSize="28" Click="ButtonClickBack"/>
+        <Border x:Name="ButtonSeperatorBorder" BorderBrush="Black" BorderThickness="0,2,0,0" HorizontalAlignment="Right" Height="15" Margin="0,0,40,325" VerticalAlignment="Bottom" Width="760"/>
+        <CheckBox x:Name="MondayCheckBox" Content="Særarrangement" Height="0" Margin="140,189,0,0" VerticalAlignment="Top" Width="155" IsChecked="{Binding MondayCheckBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <CheckBox x:Name="TuesdayCheckBox" Content="Særarrangement" Height="0" Margin="384,189,0,0" VerticalAlignment="Top" Width="155" IsChecked="{Binding TuesdayCheckBox, Mode=TwoWay}"/>
+        <CheckBox x:Name="WednesdayCheckBox" Content="Særarrangement" Height="0" Margin="623,189,0,0" VerticalAlignment="Top" Width="155" IsChecked="{Binding WednesdayCheckBox, Mode=TwoWay}"/>
+        <CheckBox x:Name="ThursdayCheckBox" Content="Særarrangement" Height="0" Margin="861,189,904,0" VerticalAlignment="Top" HorizontalAlignment="Stretch" d:LayoutOverrides="LeftPosition, RightPosition" IsChecked="{Binding ThursdayCheckBox, Mode=TwoWay}"/>
+    </Grid>
+</Page>
